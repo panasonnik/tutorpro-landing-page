@@ -1,5 +1,28 @@
 @use "../utils/variables";
+@use "../main_page/initial-setup";
 
-h1 {
-    color: variables.$color-brand-primary;
+.navbar {
+    padding: 31px 80px;
+    background: variables.$color-canvas;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &__logo {
+        text-decoration: none;
+        color: variables.$color-brand-secondary;
+        font-weight:bold;
+        font-size:48px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        gap:30px;
+    }
+    &__item {
+        text-decoration: none;
+        color:#000;
+        font-size:24px;
+    }
 }
