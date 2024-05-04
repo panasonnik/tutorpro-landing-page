@@ -1,0 +1,5 @@
+@use "../utils/variables";
+
+h1 {
+    color: variables.$color-brand-primary;
+}
