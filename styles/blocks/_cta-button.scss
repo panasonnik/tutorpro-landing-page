@@ -12,5 +12,7 @@
     &--primary {
         background: variables.$color-brand-primary;
     }
-    
+    &--outline {
+        background: variables.$color-canvas;
+    }
 }
