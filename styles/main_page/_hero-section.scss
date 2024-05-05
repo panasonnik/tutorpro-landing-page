@@ -1,0 +1,46 @@
+@use "../utils/variables";
+@use "../utils/utils";
+@use "../blocks/cta-button";
+
+.hero {
+    display:flex;
+    justify-content: space-between;
+    gap:144px;
+    align-items:center;
+    &__info-container {
+        flex:0 0 630px;
+    }
+    &__heading {
+        margin-bottom:15px;
+    }
+    &__description {
+        margin-bottom: 60px;
+    }
+    &__buttons-container {
+        display: flex;
+        gap: 20px;
+    }
+    &__image-container {
+        display: flex;
+    }
+    &__image-container {
+        position:relative;
+        display: inline-block;
+    }
+    &__image {
+        width: 550px;
+        object-fit: cover;
+        aspect-ratio:1/1;
+        border-radius:50%;
+    }
+    &__circle-decoration {
+        background: #FECCB5;
+        border:3px solid variables.$color-text;
+        border-radius:50%;
+        width:120px;
+        aspect-ratio: 1/1;
+        position: absolute;
+        bottom:0;
+        right:32px;
+    }
+}

@@ -1,10 +1,16 @@
 body {
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #FAF3E1;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 0 80px;
 }
 
 .navbar {
-  padding: 31px 80px;
+  padding: 27px 80px;
   background: #FAF3E1;
   display: flex;
   justify-content: space-between;
@@ -27,4 +33,83 @@ body {
   text-decoration: none;
   color: #000;
   font-size: 24px;
+}
+
+.cta-button {
+  text-decoration: none;
+  color: #262626;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 24px 36px;
+  border: 2px solid #262626;
+  border-radius: 16px;
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.5);
+}
+.cta-button--primary {
+  background: #FEC447;
+}
+
+.heading {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.description-text {
+  font-size: 24px;
+  color: #455A6F;
+  margin: 0;
+}
+
+.shadow {
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 144px;
+  align-items: center;
+}
+.hero__info-container {
+  flex: 0 0 630px;
+}
+.hero__heading {
+  margin-bottom: 15px;
+}
+.hero__description {
+  margin-bottom: 60px;
+}
+.hero__buttons-container {
+  display: flex;
+  gap: 20px;
+}
+.hero__image-container {
+  display: flex;
+}
+.hero__image-container {
+  position: relative;
+  display: inline-block;
+}
+.hero__image {
+  width: 550px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.hero__circle-decoration {
+  background: #FECCB5;
+  border: 3px solid #262626;
+  border-radius: 50%;
+  width: 120px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  bottom: 0;
+  right: 32px;
 }
