@@ -2,9 +2,13 @@
 @use "../main_page/initial-setup";
 
 .navbar {
-    padding: 27px 80px;
+    padding: 20px 80px;
+    max-height:100px;
     background: variables.$color-canvas;
     display:flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     justify-content: space-between;
     align-items: baseline;
     &__logo {

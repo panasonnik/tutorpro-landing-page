@@ -1,5 +1,4 @@
 @use "../utils/variables";
-@use "../utils/utils";
 @use "../blocks/cta-button";
 
 .hero {
@@ -7,9 +6,6 @@
     justify-content: space-between;
     gap:144px;
     align-items:center;
-    &__info-container {
-        flex:0 0 630px;
-    }
     &__heading {
         margin-bottom:15px;
     }
