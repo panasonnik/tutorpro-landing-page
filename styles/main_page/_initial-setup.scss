@@ -1,6 +1,7 @@
 @use "../utils/fonts";
 @use "../utils/utils";
-@use "../utils/variables";
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 html {
     scroll-behavior: smooth;
@@ -8,9 +9,15 @@ html {
 body {
     margin: 0;
     font-family:'FixelDisplay';
-    background: variables.$color-canvas;
+    background: $color-canvas;
     box-sizing: border-box;
 }
 .content {
     padding: 0 80px;
+    @include mq(medium) {
+       padding: 0 40px;
+    }
+    @include mq(small) {
+        padding: 0 16px;
+     }
 }

@@ -1,8 +1,12 @@
-@use "../utils/variables";
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .logo {
     text-decoration: none;
-    color: variables.$color-brand-secondary;
+    color: $color-brand-secondary;
     font-weight:bold;
     font-size:48px;
+    @include mq(medium) {
+        font-size: 36px;
+    }
 }

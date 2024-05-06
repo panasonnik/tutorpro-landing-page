@@ -4,6 +4,11 @@
   font-weight: bold;
   font-size: 48px;
 }
+@media only screen and (max-width: 1024px) {
+  .logo {
+    font-size: 36px;
+  }
+}
 
 @font-face {
   font-family: "FixelDisplay";
@@ -68,6 +73,16 @@ body {
 .content {
   padding: 0 80px;
 }
+@media only screen and (max-width: 1024px) {
+  .content {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .content {
+    padding: 0 16px;
+  }
+}
 
 .navbar {
   padding: 20px 80px;
@@ -79,6 +94,32 @@ body {
   z-index: 100;
   justify-content: space-between;
   align-items: baseline;
+}
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+}
+.navbar__menu {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .navbar__menu {
+    display: block;
+    width: 36px;
+    height: 36px;
+    fill: #341F58;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .navbar__links {
+    display: none;
+  }
 }
 .navbar__list {
   list-style: none;

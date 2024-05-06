@@ -1,16 +1,37 @@
-@use "../utils/variables";
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 @use "../main_page/initial-setup";
 
 .navbar {
     padding: 20px 80px;
     max-height:100px;
-    background: variables.$color-canvas;
+    background: $color-canvas;
     display:flex;
     position: sticky;
     top: 0;
     z-index: 100;
     justify-content: space-between;
     align-items: baseline;
+    @include mq(medium) {
+        padding: 20px 40px;
+     }
+     @include mq(small) {
+         padding: 10px 16px;
+      }
+    &__menu {
+        display: none;
+        @include mq(medium) {
+            display: block;
+            width:36px;
+            height:36px;
+            fill: $color-brand-secondary;
+        }
+    }
+    &__links {
+        @include mq(medium) {
+            display: none;
+        }
+    }
     &__list {
         list-style: none;
         display: flex;
@@ -26,8 +47,9 @@
         border-radius: 24px;
         transition: all 200ms ease-in-out;
         &:hover, &--active {
-            background:variables.$color-brand-secondary;
-            color:variables.$color-canvas;
+            background:$color-brand-secondary;
+            color:$color-canvas;
         }
     }
+    
 }
