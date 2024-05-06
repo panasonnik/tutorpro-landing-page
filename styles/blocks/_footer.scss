@@ -12,13 +12,16 @@
     &__links-list {
         list-style: none;
         padding:0;
-        color:variables.$color-canvas;
     }
     &__list-item {
         margin-bottom:20px;
         font-weight:500;
         font-size:24px;
         text-align: right;
+    }
+    &__link {
+        text-decoration: none;
+        color:variables.$color-canvas;
     }
     &__list-item:last-child {
         margin-bottom:0;
