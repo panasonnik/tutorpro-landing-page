@@ -1,3 +1,10 @@
+.logo {
+  text-decoration: none;
+  color: #341F58;
+  font-weight: bold;
+  font-size: 48px;
+}
+
 @font-face {
   font-family: "FixelDisplay";
   font-weight: 400;
@@ -40,6 +47,13 @@
   box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.3);
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
 body {
   margin: 0;
   font-family: "FixelDisplay";
@@ -62,12 +76,6 @@ body {
   justify-content: space-between;
   align-items: baseline;
 }
-.navbar__logo {
-  text-decoration: none;
-  color: #341F58;
-  font-weight: bold;
-  font-size: 48px;
-}
 .navbar__list {
   list-style: none;
   display: flex;
@@ -81,7 +89,33 @@ body {
   font-size: 24px;
 }
 
+.footer {
+  background: #341F58;
+  padding: 56px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo {
+  color: #FAF3E1;
+}
+.footer__links-list {
+  list-style: none;
+  padding: 0;
+  color: #FAF3E1;
+}
+.footer__list-item {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: right;
+}
+.footer__list-item:last-child {
+  margin-bottom: 0;
+}
+
 .cta-button {
+  display: inline-block;
   text-decoration: none;
   color: #262626;
   font-size: 24px;
@@ -96,6 +130,17 @@ body {
 }
 .cta-button--outline {
   background: #FAF3E1;
+}
+
+.card {
+  padding: 40px;
+  border: 3px solid #262626;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  text-align: left;
 }
 
 .hero {
@@ -165,16 +210,6 @@ body {
   background: #fec447;
 }
 
-.card {
-  padding: 40px;
-  border: 3px solid #262626;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 25px;
-  text-align: left;
-}
 .card__step-num {
   font-size: 64px;
   color: #455A6F;
@@ -229,4 +264,83 @@ body {
 .card__price span {
   font-size: 48px;
   color: #262626;
+}
+
+.testimonials {
+  margin: 100px 0;
+}
+.testimonials__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.testimonials__card {
+  border: 2px solid #d9d9d9;
+  padding: 50px 40px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+}
+.testimonials__image-container {
+  display: inline-block;
+  position: relative;
+}
+.testimonials__image {
+  width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 12px;
+  z-index: 0;
+}
+.testimonials__colored-shadow {
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  aspect-ratio: 1/1;
+  top: 8px;
+  left: 8px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+}
+.testimonials__colored-shadow--color1 {
+  background: #FEC447;
+}
+.testimonials__colored-shadow--color2 {
+  background: #9bd3d0;
+}
+.testimonials__colored-shadow--color3 {
+  background: #feccb5;
+}
+.testimonials__header {
+  margin-bottom: 64px;
+}
+.testimonials__name {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+.testimonials__review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cta {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 32px;
+}
+.cta__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: start;
+}
+.cta__header {
+  text-align: left;
+  max-width: 75%;
 }

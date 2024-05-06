@@ -1,0 +1,17 @@
+.cta {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    margin-top:100px;
+    margin-bottom:32px;
+    &__text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: start;
+    }
+    &__header {
+        text-align: left;
+        max-width:75%;
+    }
+}

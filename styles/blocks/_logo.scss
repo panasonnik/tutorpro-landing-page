@@ -1,0 +1,8 @@
+@use "../utils/variables";
+
+.logo {
+    text-decoration: none;
+    color: variables.$color-brand-secondary;
+    font-weight:bold;
+    font-size:48px;
+}

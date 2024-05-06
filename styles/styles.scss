@@ -1,7 +1,11 @@
+@use "blocks/logo";
 @use "blocks/navbar";
 @use "blocks/footer";
 @use "blocks/cta-button";
+@use "blocks/card";
 @use "main_page/hero-section";
 @use "main_page/about-section";
 @use "main_page/pricing-section";
+@use "main_page/testimonials-section";
+@use "main_page/cta-section";
 @use "utils/fonts";

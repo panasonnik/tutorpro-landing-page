@@ -11,12 +11,6 @@
     z-index: 100;
     justify-content: space-between;
     align-items: baseline;
-    &__logo {
-        text-decoration: none;
-        color: variables.$color-brand-secondary;
-        font-weight:bold;
-        font-size:48px;
-    }
     &__list {
         list-style: none;
         display: flex;

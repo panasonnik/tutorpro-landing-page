@@ -28,15 +28,6 @@
     
 }
 .card {
-    padding: 40px;
-    border: 3px solid variables.$color-text;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 25px;
-    text-align:left;
-
     &__step-num {
         font-size: 64px;
         color: variables.$color-text-muted;
