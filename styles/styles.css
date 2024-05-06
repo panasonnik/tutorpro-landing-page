@@ -54,6 +54,10 @@
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "FixelDisplay";
@@ -87,6 +91,13 @@ body {
   text-decoration: none;
   color: #000;
   font-size: 24px;
+  padding: 9px 24px;
+  border-radius: 24px;
+  transition: all 200ms ease-in-out;
+}
+.navbar__item:hover, .navbar__item--active {
+  background: #341F58;
+  color: #FAF3E1;
 }
 
 .footer {
