@@ -8,7 +8,7 @@
     } @else if $size == medium {
       @media only screen and (max-width: $mq-medium) { @content; }
     } @else if $size == large {
-      @media only screen and (min-width: $mq-medium) { @content; }
+      @media only screen and (min-width: $mq-medium) and (max-width: $mq-large) { @content; }
     }
   }
   

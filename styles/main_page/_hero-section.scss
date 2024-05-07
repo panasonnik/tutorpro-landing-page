@@ -1,33 +1,72 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
 @use "../blocks/cta-button";
 
 .hero {
-    display:flex;
-    justify-content: space-between;
-    gap:144px;
-    align-items:center;
+    @include mq(medium) {
+        display: flex; 
+        flex-direction: column;
+        gap: 20px;
+    }
     &__heading {
         margin-bottom:15px;
+        max-width:50%;
+        display: inline-flex;
+        margin-top:100px;
+        @include mq(medium) {
+            order:1;
+            max-width: fit-content;
+            text-align: center;
+        }
     }
     &__description {
-        margin-bottom: 60px;
+        max-width:50%;
+        margin-bottom:60px;
+        @include mq(medium) {
+            order:2;
+            max-width: fit-content;
+            text-align: center;
+            margin-bottom:0;
+            
+        }
     }
     &__buttons-container {
         display: flex;
         gap: 20px;
+        @include mq(medium) {
+            order:4;
+        }
+    }
+    @include mq(medium) {
+        &__cta-button--primary {
+            flex:4;
+        }
+        &__cta-button--outline {
+            display: none;
+        }
     }
     &__image-container {
         display: flex;
-    }
-    &__image-container {
+        float:right;
         position:relative;
-        display: inline-block;
+        @include mq(medium) {
+            order:3;
+            margin:0 auto;
+            float:left;
+        }
     }
     &__image {
         width: 550px;
         object-fit: cover;
         aspect-ratio:1/1;
         border-radius:50%;
+        @include mq(small) {
+            width:250px;
+        }
+        @include mq(large) {
+            width:400px;
+            margin-top:60px;
+        }
     }
     &__circle-decoration {
         background: #FECCB5;
@@ -38,5 +77,11 @@
         position: absolute;
         bottom:0;
         right:32px;
+        @include mq(small) {
+            width:50px;
+        }
+        @include mq(large) {
+            width:70px;
+        }
     }
 }
