@@ -1,3 +1,5 @@
+@use "utils/fonts";
+@use "utils/mixins";
 @use "blocks/logo";
 @use "blocks/navbar";
 @use "blocks/footer";
@@ -9,5 +11,3 @@
 @use "main_page/pricing-section";
 @use "main_page/testimonials-section";
 @use "main_page/cta-section";
-@use "utils/fonts";
-@use "utils/mixins";
