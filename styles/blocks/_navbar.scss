@@ -14,10 +14,10 @@
     align-items: baseline;
     @include mq(medium) {
         padding: 20px 40px;
-     }
+    }
      @include mq(small) {
          padding: 10px 16px;
-      }
+    }
     &__menu {
         display: none;
         @include mq(medium) {

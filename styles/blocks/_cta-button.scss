@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
 
 .cta-button {
     display:inline-block;
@@ -15,5 +16,8 @@
     }
     &--outline {
         background: variables.$color-canvas;
+    }
+     @include mq(small) {
+        padding: 16px 36px;
     }
 }
