@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
 
 .testimonials {
     margin: 100px 0;
@@ -7,6 +8,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap:20px;
         margin-bottom:20px;
+        @include mq(small) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     &__card {
         border: 2px solid #d9d9d9;
@@ -15,6 +19,17 @@
         gap:30px;
         flex-direction: row;
         align-items: center;
+        @include mq(medium) {
+            padding:30px;
+            gap:20px;
+            flex-direction: column;
+            text-align:center;
+            justify-content: start;
+        }
+        @include mq(small) {
+            justify-content: center;
+            padding-bottom:60px;
+        }
     }
     &__image-container {
         display: inline-block;
@@ -59,5 +74,8 @@
         display: flex;
         flex-direction: column;
         gap:20px;
+        @include mq(medium) {
+            gap:16px;
+        }
     }
 }
