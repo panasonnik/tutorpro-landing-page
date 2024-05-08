@@ -26,7 +26,7 @@
     }
     &__close-menu {
         position:absolute;
-        top:-10px;
+        top:4px;
         right:16px;
     }
     &__menu {
@@ -34,7 +34,7 @@
             display: block;  
         }
     }
-    &__list {
+    &__list, &__list--sidebar {
         list-style: none;
         display: flex;
         justify-content: space-evenly;
@@ -42,22 +42,28 @@
         gap:30px;
         padding:0;
     }
-    &__list--sidebar {
+    &__list {
         @include mq(medium) {
+            display: none;
+        }
+    }
+    &__list--sidebar {
+        display: none;
+        @include mq(medium) {
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100vh;
             position:fixed;
-            top: 0;
+            top: -16px;
             right: 0;
             z-index: 100;
             background: $color-canvas;
-   
             transition: all 0.2s ease-in-out;
-            display: none;
         }
+   
     }
        
     
