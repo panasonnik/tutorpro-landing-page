@@ -1,4 +1,6 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
+
 .pricing {
     margin:200px 0;
     &__subheading {
@@ -11,6 +13,14 @@
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+        @include mq(medium) {
+            grid-template-columns: repeat(1,1fr);
+            max-width:80%;
+            margin: 0 auto;
+        }
+        @include mq(small) {
+            max-width:100%;
+        }
     }
     &__card {
         padding:40px;
@@ -22,6 +32,9 @@
         }
         &--colored {
             background: variables.$color-brand-primary;
+            @include mq(medium) {
+                order:-1;
+            }
         }
     }
     &__cta-button {
