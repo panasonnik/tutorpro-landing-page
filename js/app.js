@@ -20,11 +20,14 @@ window.onscroll = () => {
     });
 };
 function openSidebar() {
-    document.querySelector('.navbar__list--sidebar').style.display="flex";
+    document.querySelector('.navbar__list--sidebar').style.width = "100%";
+    document.querySelector('.navbar__list--sidebar').style.right = "0";
+    
     document.querySelector('.navbar__close-menu').style.display="block";
 }
 function closeSidebar() {
-    document.querySelector('.navbar__list--sidebar').style.display="none";
+    document.querySelector('.navbar__list--sidebar').style.width = "0";
+    document.querySelector('.navbar__list--sidebar').style.right = "-250px";
     document.querySelector('.navbar__close-menu').style.display="none";
 }
 function handleSidebarClick(event) {
