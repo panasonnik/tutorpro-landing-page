@@ -19,3 +19,17 @@ window.onscroll = () => {
         }
     });
 };
+function openSidebar() {
+    document.querySelector('.navbar__list--sidebar').style.display="flex";
+    document.querySelector('.navbar__close-menu').style.display="block";
+}
+function closeSidebar() {
+    document.querySelector('.navbar__list--sidebar').style.display="none";
+    document.querySelector('.navbar__close-menu').style.display="none";
+}
+function handleSidebarClick(event) {
+    if (event.target.tagName === 'A') {
+        closeSidebar();
+    }
+}
+

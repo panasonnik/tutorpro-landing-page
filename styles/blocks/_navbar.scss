@@ -18,18 +18,20 @@
      @include mq(small) {
          padding: 10px 16px;
     }
-    &__menu {
+    &__menu, &__close-menu {
         display: none;
-        @include mq(medium) {
-            display: block;
-            width:36px;
-            height:36px;
-            fill: $color-brand-secondary;
-        }
+        width:36px;
+        height:36px;
+        fill: $color-brand-secondary;
     }
-    &__links {
+    &__close-menu {
+        position:absolute;
+        top:-10px;
+        right:16px;
+    }
+    &__menu {
         @include mq(medium) {
-            display: none;
+            display: block;  
         }
     }
     &__list {
@@ -40,6 +42,25 @@
         gap:30px;
         padding:0;
     }
+    &__list--sidebar {
+        @include mq(medium) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            position:fixed;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            background: $color-canvas;
+   
+            transition: all 0.2s ease-in-out;
+            display: none;
+        }
+    }
+       
+    
     &__item {
         text-decoration: none;
         color:#000;
