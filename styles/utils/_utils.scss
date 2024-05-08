@@ -29,8 +29,14 @@
     font-size:24px;
     color:variables.$color-text-muted;
     margin:0;
-     @include mq(small) {
+    @include mq(small) {
         font-size: 18px;
+    }
+    @include mq(medium) {
+        font-size: 20px;
+    }
+    @include mq(large) {
+        font-size: 20px;
     }
 }
 .shadow {

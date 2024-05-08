@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
 
 .card {
     padding: 40px;
@@ -9,4 +10,12 @@
     justify-content: center;
     gap: 25px;
     text-align:left;
+    @include mq(large) {
+        padding:30px;
+        gap: 20px;
+    }
+    @include mq(medium) {
+        padding:30px;
+        gap: 20px;
+    }
 }

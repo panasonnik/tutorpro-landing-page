@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/mixins" as *;
 
 .about {
     text-align:center;
@@ -8,13 +9,32 @@
         margin:0 auto; 
     }
     &__cards {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr);
+        display: flex; 
         gap: 20px;
         margin-top:50px;
+        // grid-template-columns: repeat(3, 1fr);
+        // @include mq(medium) {
+        //     grid-template-columns: repeat(1, minmax(300px, 1fr));
+        // }
+        // @include mq(large) {
+            
+        // }
+        @include mq(medium) {
+            flex-wrap: wrap;
+        }
     }
     &__card {
         aspect-ratio: 1/1;
+        @include mq(medium) {
+            padding:35px 30px;
+            aspect-ratio: 2/1;
+            width:75%;
+            margin:0 auto;
+        }
+        @include mq(small) {
+            max-width:100%;
+        }
+        
         &--color1 {
             background: #9bd3d0;
         }
@@ -33,10 +53,22 @@
         color: variables.$color-text-muted;
         font-weight: 700;
         margin:0;
+        @include mq(medium) {
+            font-size:48px;
+        }
+        @include mq(large) {
+            font-size:56px;
+        }
     }
     &__title {
         font-size: 36px;
         font-weight: 500;
         margin:0;
+        @include mq(medium) {
+            font-size:24px;
+        }
+        @include mq(large) {
+            font-size:24px;
+        }
     }
 }
