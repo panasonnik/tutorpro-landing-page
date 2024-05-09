@@ -3,6 +3,7 @@
 @use "../blocks/cta-button";
 
 .hero {
+    margin-top:10px;
     @include mq(medium) {
         display: flex; 
         flex-direction: column;

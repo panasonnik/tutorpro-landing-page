@@ -123,6 +123,8 @@ body {
   padding: 20px 80px;
   max-height: 100px;
   background: #FAF3E1;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: 0 3px 20px rgba(213, 207, 189, 0.5098039216);
   display: flex;
   position: sticky;
   top: 0;
@@ -335,6 +337,9 @@ body {
   border-radius: 20px;
 }
 
+.hero {
+  margin-top: 10px;
+}
 @media only screen and (max-width: 1024px) {
   .hero {
     display: flex;
@@ -539,7 +544,6 @@ body {
 }
 .pricing__card {
   padding: 40px;
-  justify-content: start;
 }
 .pricing__card-content {
   display: flex;
@@ -556,14 +560,22 @@ body {
 }
 .pricing__cta-button {
   text-align: center;
-  margin-top: auto;
 }
 
 .card__features-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  height: 140px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  line-height: 2;
+}
+.card__features-list::-webkit-scrollbar {
+  display: none;
 }
 .card__price {
+  margin: 0;
   font-size: 18px;
   color: #455A6F;
 }

@@ -24,7 +24,6 @@
     }
     &__card {
         padding:40px;
-        justify-content: start;
         &-content {
             display: flex;
             flex-direction: column;
@@ -39,15 +38,23 @@
     }
     &__cta-button {
         text-align:center;
-        margin-top:auto;
     }
 }
 .card {
     &__features-list {
         list-style: none;
         padding:0;
+        margin:0;
+        height:140px;
+        overflow: auto;
+        text-overflow: ellipsis;
+        line-height:2;
+     &::-webkit-scrollbar {
+        display: none;
+      }
     }
     &__price {
+        margin:0;
         font-size: 18px;
         color:variables.$color-text-muted;
         span {
