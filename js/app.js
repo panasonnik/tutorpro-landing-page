@@ -50,3 +50,14 @@ document.querySelector(".pop-up__close-btn").addEventListener('click',function()
     document.querySelector(".auth-pop-up").classList.toggle("active");
 });
 
+document.querySelector(".pop-up__close-sign-in-btn").addEventListener('click',function() {
+    document.querySelector(".sign-in-pop-up").classList.toggle("active");
+    document.querySelector(".container").classList.toggle("blur");
+});
+
+document.querySelector(".pop-up__link").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.querySelector(".auth-pop-up").classList.toggle("active");
+    document.querySelector(".sign-in-pop-up").classList.toggle("active");
+});
+

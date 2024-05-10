@@ -17,7 +17,7 @@
   opacity: 1;
   transition: 0.5s;
     }
-    &__close-btn {
+    &__close-btn, &__close-sign-in-btn {
         position:absolute;
         top:16px;
         right:16px;
@@ -44,7 +44,7 @@
         border:1px solid #aaa;
         border-radius:6px;
     }
-    &__btn {
+    &__btn, &__sign-in-btn {
         margin-top:16px;
         width:100%;
         padding:10px;
@@ -61,5 +61,13 @@
         text-decoration: none;
         font-weight: 600;
         color: #1a79ca;
+    }
+}
+.sign-in-pop-up {
+    &.active {
+        top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
     }
 }

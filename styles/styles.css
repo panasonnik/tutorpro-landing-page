@@ -363,7 +363,7 @@ body {
   opacity: 1;
   transition: 0.5s;
 }
-.pop-up__close-btn {
+.pop-up__close-btn, .pop-up__close-sign-in-btn {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -390,7 +390,7 @@ body {
   border: 1px solid #aaa;
   border-radius: 6px;
 }
-.pop-up__btn {
+.pop-up__btn, .pop-up__sign-in-btn {
   margin-top: 16px;
   width: 100%;
   padding: 10px;
@@ -407,6 +407,13 @@ body {
   text-decoration: none;
   font-weight: 600;
   color: #1a79ca;
+}
+
+.sign-in-pop-up.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .hero {
