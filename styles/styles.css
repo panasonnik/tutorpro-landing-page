@@ -408,6 +408,11 @@ body {
   font-weight: 600;
   color: #1a79ca;
 }
+.pop-up__error-message {
+  margin-top: 5px;
+  color: rgb(174, 3, 3);
+  font-size: 14px;
+}
 
 .sign-in-pop-up.active {
   top: 50%;

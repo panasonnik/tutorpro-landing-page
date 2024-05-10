@@ -17,12 +17,29 @@ async function createUser() {
       });
   
       const result = await response.json();
-      console.log(result);
+      return result.unique;
+    //   if (result.success === true) {
+    //     window.location.href = "payment.html";
+    //   }
     } catch (error) {
       console.error("Error:", error);
     }
 }
-
 document.querySelector(".pop-up__sign-in-btn").addEventListener('click', function() {
     createUser();
+});
+
+document.getElementById("signInForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById("register-email");
+    const emailError = document.getElementById("email-error");
+
+    const email = emailInput.value;
+    const isUnique = await isEmailUnique(email);
+    if (!isUnique) {
+        emailError.textContent = "Email already in use!";
+        return;
+    }
+
+    this.submit();
 });
