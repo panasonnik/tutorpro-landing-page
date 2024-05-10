@@ -3,10 +3,8 @@ function displayErrorMessage(message) {
     errorDiv.textContent = message;
 }
 
-async function postJSON(event) {
-    // Prevent the default form submission behavior
+async function loginUser(event) {
     event.preventDefault();
-
     const form = document.getElementById("loginForm");
  
     if (form.checkValidity()) {
@@ -28,9 +26,8 @@ async function postJSON(event) {
             });
 
             const result = await response.json();
-            console.log(result);
             if (!result.success) {
-                const errorMessage = result.message || "An error occurred.";
+                const errorMessage = result.message || "Wrong email or password!";
                 displayErrorMessage(errorMessage);
             }
             if (result.success === true) {
@@ -44,14 +41,11 @@ async function postJSON(event) {
         form.reportValidity();
     }
 }
-
-document.querySelectorAll(".pop-up__btn").forEach(button => {
-    button.addEventListener('click', function(event) {
-        postJSON(event);
-    });
+const loginForm = document.getElementById("loginForm");
+loginForm.addEventListener("submit", function(event) {
+    loginUser(event);
 });
 
-const loginForm = document.getElementById("loginForm");
 
 loginForm.querySelectorAll(".pop-up__input").forEach(form => {
     form.addEventListener("input", function() {

@@ -48,6 +48,7 @@ document.querySelectorAll(".pricing__cta-button").forEach(button=> {
 document.querySelector(".pop-up__close-btn").addEventListener('click',function() {
     document.querySelector(".container").classList.toggle("blur");
     document.querySelector(".auth-pop-up").classList.toggle("active");
+    document.getElementById("loginForm").reset();
 });
 
 document.querySelector(".pop-up__close-sign-in-btn").addEventListener('click',function() {
