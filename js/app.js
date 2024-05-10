@@ -36,3 +36,17 @@ function handleSidebarClick(event) {
     }
 }
 
+document.querySelectorAll(".pricing__cta-button").forEach(button=> {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector(".container").classList.toggle("blur");
+
+        document.querySelector(".auth-pop-up").classList.toggle("active");
+    });
+});
+
+document.querySelector(".pop-up__close-btn").addEventListener('click',function() {
+    document.querySelector(".container").classList.toggle("blur");
+    document.querySelector(".auth-pop-up").classList.toggle("active");
+});
+

@@ -7,282 +7,324 @@
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
-    <section class="navbar">
-      <a href="#" class="navbar__logo logo">TutorPro.</a>
-      <nav class="navbar__links">
-        <ul class="navbar__list" onclick="handleSidebarClick(event)">
-          <li>
-            <a class="navbar__item navbar__item--active" href="#home">Home</a>
-          </li>
-          <li><a class="navbar__item" href="#about">About</a></li>
-          <li><a class="navbar__item" href="#pricing">Pricing</a></li>
-          <li><a class="navbar__item" href="#testimonials">Our clients</a></li>
-        </ul>
-        <ul class="navbar__list--sidebar" onclick="handleSidebarClick(event)">
-          <li class="navbar__close-menu" onclick="closeSidebar()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-              <path
-                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-              />
-            </svg>
-          </li>
-          <li>
-            <a class="navbar__item navbar__item--active" href="#home">Home</a>
-          </li>
-          <li><a class="navbar__item" href="#about">About</a></li>
-          <li><a class="navbar__item" href="#pricing">Pricing</a></li>
-          <li><a class="navbar__item" href="#testimonials">Our clients</a></li>
-        </ul>
-      </nav>
-      <div class="navbar__menu" onclick="openSidebar()">
-        <svg
-          class="navbar__menu-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-        >
-          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
+    <div class="container">
+      <section class="navbar">
+        <a href="#" class="navbar__logo logo">TutorPro.</a>
+        <nav class="navbar__links">
+          <ul class="navbar__list" onclick="handleSidebarClick(event)">
+            <li>
+              <a class="navbar__item navbar__item--active" href="#home">Home</a>
+            </li>
+            <li><a class="navbar__item" href="#about">About</a></li>
+            <li><a class="navbar__item" href="#pricing">Pricing</a></li>
+            <li>
+              <a class="navbar__item" href="#testimonials">Our clients</a>
+            </li>
+          </ul>
+          <ul class="navbar__list--sidebar" onclick="handleSidebarClick(event)">
+            <li class="navbar__close-menu" onclick="closeSidebar()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                />
+              </svg>
+            </li>
+            <li>
+              <a class="navbar__item navbar__item--active" href="#home">Home</a>
+            </li>
+            <li><a class="navbar__item" href="#about">About</a></li>
+            <li><a class="navbar__item" href="#pricing">Pricing</a></li>
+            <li>
+              <a class="navbar__item" href="#testimonials">Our clients</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="navbar__menu" onclick="openSidebar()">
+          <svg
+            class="navbar__menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </div>
+      </section>
+      <div class="content">
+        <section class="hero" id="home">
+          <div class="hero__image-container">
+            <img
+              src="../images/hero-image.avif"
+              alt="School student"
+              class="hero__image"
+            />
+            <div class="hero__circle-decoration"></div>
+          </div>
+          <h1 class="hero__heading heading">Boost your grades with TutorPro</h1>
+          <p class="hero__description description-text">
+            Your ultimate study companion for improving academic performance for
+            students.
+          </p>
+          <div class="hero__buttons-container">
+            <a
+              href="#"
+              class="hero__cta-button--primary cta-button cta-button--primary"
+              >Get the app</a
+            >
+            <a
+              href="#pricing"
+              class="hero__cta-button--outline cta-button cta-button--outline"
+              >Learn more</a
+            >
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about__header header">
+            <h2 class="about__subheading subheading">
+              Save time on the homework
+            </h2>
+            <p class="about__description description-text">
+              With TutorPro, boost your grades in just a few clicks – it's that
+              simple!
+            </p>
+          </div>
+          <div class="about__cards">
+            <div class="card about__card about__card--color1 shadow">
+              <p class="card__step-num">01.</p>
+              <h3 class="card__title">Choose a subject</h3>
+              <p class="card__description description-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+            <div class="card about__card about__card--color2 shadow">
+              <p class="card__step-num">02.</p>
+              <h3 class="card__title">Enter your topic</h3>
+              <p class="card__description description-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+            <div class="card about__card about__card--color3 shadow">
+              <p class="card__step-num">03.</p>
+              <h3 class="card__title">Get the summary</h3>
+              <p class="card__description description-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="pricing" id="pricing">
+          <h2 class="pricing__subheading subheading">
+            Find the plan that suits your needs
+          </h2>
+          <div class="pricing__cards">
+            <div class="card pricing__card">
+              <div class="pricing__card-content">
+                <h3 class="card__title">Free</h3>
+                <p class="card__price"><span>$0</span> /month</p>
+                <ul class="card__features-list">
+                  <li class="card__feature-item">Feature1</li>
+                  <li class="card__feature-item">Feature2</li>
+                </ul>
+                <a
+                  href="#"
+                  class="cta-button cta-button--outline pricing__cta-button"
+                  >Get started</a
+                >
+              </div>
+            </div>
+            <div class="card pricing__card--colored pricing__card">
+              <div class="pricing__card-content">
+                <h3 class="card__title">Premium</h3>
+                <p class="card__price"><span>$5</span> /month</p>
+                <ul class="card__features-list">
+                  <li class="card__feature-item">Feature1</li>
+                  <li class="card__feature-item">Feature2</li>
+                  <li class="card__feature-item">Feature2</li>
+                  <li class="card__feature-item">Feature2</li>
+                </ul>
+                <a
+                  href="#"
+                  class="cta-button cta-button--outline pricing__cta-button"
+                  >Get started</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonials" id="testimonials">
+          <div class="testimonials__header header">
+            <h2 class="testimonials__subheading subheading">
+              More than 100 satisfied students
+            </h2>
+            <p class="testimonials__description description-text">
+              See what others are saying about TutorPro
+            </p>
+          </div>
+          <div class="testimonials__cards">
+            <div class="testimonials__row">
+              <div class="testimonials__card card">
+                <div class="testimonials__image-container">
+                  <img
+                    src="../images/hero-image.avif"
+                    alt=""
+                    class="testimonials__image"
+                  />
+                  <div
+                    class="testimonials__colored-shadow testimonials__colored-shadow--color1"
+                  ></div>
+                </div>
+                <div class="testimonials__review-container">
+                  <h3 class="testimonials__name">Glenda VonRueden</h3>
+                  <p class="testimonials__review description-text">
+                    Qui repellendus molestias ut earum ut placeat quos.
+                    Explicabo ratione impedit iste. Quasi nostrum alias maiores
+                    assumenda.
+                  </p>
+                </div>
+              </div>
+              <div class="testimonials__card card">
+                <div class="testimonials__image-container">
+                  <img
+                    src="../images/hero-image.avif"
+                    alt=""
+                    class="testimonials__image"
+                  />
+                  <div
+                    class="testimonials__colored-shadow testimonials__colored-shadow--color2"
+                  ></div>
+                </div>
+                <div class="testimonials__review-container">
+                  <h3 class="testimonials__name">Glenda VonRueden</h3>
+                  <p class="testimonials__review description-text">
+                    Qui repellendus molestias ut earum ut placeat quos.
+                    Explicabo
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__row">
+              <div class="testimonials__card card">
+                <div class="testimonials__image-container">
+                  <img
+                    src="../images/hero-image.avif"
+                    alt=""
+                    class="testimonials__image"
+                  />
+                  <div
+                    class="testimonials__colored-shadow testimonials__colored-shadow--color3"
+                  ></div>
+                </div>
+                <div class="testimonials__review-container">
+                  <h3 class="testimonials__name">Glenda VonRueden</h3>
+                  <p class="testimonials__review description-text">
+                    Qui repellendus molestias ut earum ut placeat quos.
+                    Explicabo ratione impedit iste. Quasi nostrum alias maiores
+                    assumenda.
+                  </p>
+                </div>
+              </div>
+              <div class="testimonials__card card">
+                <div class="testimonials__image-container">
+                  <img
+                    src="../images/hero-image.avif"
+                    alt=""
+                    class="testimonials__image"
+                  />
+                  <div
+                    class="testimonials__colored-shadow testimonials__colored-shadow--color1"
+                  ></div>
+                </div>
+                <div class="testimonials__review-container">
+                  <h3 class="testimonials__name">Glenda VonRueden</h3>
+                  <p class="testimonials__review description-text">
+                    Qui repellendus molestias ut earum ut placeat quos.
+                    Explicabo ratione impedit iste. Quasi nostrum alias maiores
+                    assumenda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cta">
+          <div class="cta__text-content">
+            <div class="cta__header header">
+              <h2 class="cta__subheading subheading">
+                Start learning smarter!
+              </h2>
+              <p class="cta__description description-text">
+                Level up your learning with TutorPro—download now and ace your
+                studies
+              </p>
+            </div>
+            <a href="#" class="cta__button cta-button cta-button--primary"
+              >Download the app</a
+            >
+          </div>
+          <div class="cta__phone-mockup phone-mockup">
+            <div class="phone-mockup__brove">
+              <span class="phone-mockup__speaker"></span>
+            </div>
+            <div class="phone-mockup__screen"></div>
+          </div>
+        </section>
       </div>
-    </section>
-    <div class="content">
-      <section class="hero" id="home">
-        <div class="hero__image-container">
-          <img
-            src="../images/hero-image.avif"
-            alt="School student"
-            class="hero__image"
-          />
-          <div class="hero__circle-decoration"></div>
+      <footer class="footer">
+        <a href="#home" class="footer__logo logo">TutorPro.</a>
+        <div class="footer__links">
+          <ul class="footer__links-list">
+            <li class="footer__list-item">
+              <a class="footer__link" href="#home">Home</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="#about">About us</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="#pricing">Pricing</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
         </div>
-        <h1 class="hero__heading heading">Boost your grades with TutorPro</h1>
-        <p class="hero__description description-text">
-          Your ultimate study companion for improving academic performance for
-          students.
-        </p>
-        <div class="hero__buttons-container">
-          <a
-            href="#"
-            class="hero__cta-button--primary cta-button cta-button--primary"
-            >Get the app</a
-          >
-          <a
-            href="#pricing"
-            class="hero__cta-button--outline cta-button cta-button--outline"
-            >Learn more</a
-          >
-        </div>
-      </section>
-      <section class="about" id="about">
-        <div class="about__header header">
-          <h2 class="about__subheading subheading">
-            Save time on the homework
-          </h2>
-          <p class="about__description description-text">
-            With TutorPro, boost your grades in just a few clicks – it's that
-            simple!
-          </p>
-        </div>
-        <div class="about__cards">
-          <div class="card about__card about__card--color1 shadow">
-            <p class="card__step-num">01.</p>
-            <h3 class="card__title">Choose a subject</h3>
-            <p class="card__description description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
-          </div>
-          <div class="card about__card about__card--color2 shadow">
-            <p class="card__step-num">02.</p>
-            <h3 class="card__title">Enter your topic</h3>
-            <p class="card__description description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
-          </div>
-          <div class="card about__card about__card--color3 shadow">
-            <p class="card__step-num">03.</p>
-            <h3 class="card__title">Get the summary</h3>
-            <p class="card__description description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="pricing" id="pricing">
-        <h2 class="pricing__subheading subheading">
-          Find the plan that suits your needs
-        </h2>
-        <div class="pricing__cards">
-          <div class="card pricing__card">
-            <div class="pricing__card-content">
-              <h3 class="card__title">Free</h3>
-              <p class="card__price"><span>$0</span> /month</p>
-              <ul class="card__features-list">
-                <li class="card__feature-item">Feature1</li>
-                <li class="card__feature-item">Feature2</li>
-              </ul>
-              <a
-                href="#"
-                class="cta-button cta-button--outline pricing__cta-button"
-                >Get started</a
-              >
-            </div>
-          </div>
-          <div class="card pricing__card--colored pricing__card">
-            <div class="pricing__card-content">
-              <h3 class="card__title">Premium</h3>
-              <p class="card__price"><span>$5</span> /month</p>
-              <ul class="card__features-list">
-                <li class="card__feature-item">Feature1</li>
-                <li class="card__feature-item">Feature2</li>
-                <li class="card__feature-item">Feature2</li>
-                <li class="card__feature-item">Feature2</li>
-              </ul>
-              <a
-                href="#"
-                class="cta-button cta-button--outline pricing__cta-button"
-                >Get started</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="testimonials" id="testimonials">
-        <div class="testimonials__header header">
-          <h2 class="testimonials__subheading subheading">
-            More than 100 satisfied students
-          </h2>
-          <p class="testimonials__description description-text">
-            See what others are saying about TutorPro
-          </p>
-        </div>
-        <div class="testimonials__cards">
-          <div class="testimonials__row">
-            <div class="testimonials__card card">
-              <div class="testimonials__image-container">
-                <img
-                  src="../images/hero-image.avif"
-                  alt=""
-                  class="testimonials__image"
-                />
-                <div
-                  class="testimonials__colored-shadow testimonials__colored-shadow--color1"
-                ></div>
-              </div>
-              <div class="testimonials__review-container">
-                <h3 class="testimonials__name">Glenda VonRueden</h3>
-                <p class="testimonials__review description-text">
-                  Qui repellendus molestias ut earum ut placeat quos. Explicabo
-                  ratione impedit iste. Quasi nostrum alias maiores assumenda.
-                </p>
-              </div>
-            </div>
-            <div class="testimonials__card card">
-              <div class="testimonials__image-container">
-                <img
-                  src="../images/hero-image.avif"
-                  alt=""
-                  class="testimonials__image"
-                />
-                <div
-                  class="testimonials__colored-shadow testimonials__colored-shadow--color2"
-                ></div>
-              </div>
-              <div class="testimonials__review-container">
-                <h3 class="testimonials__name">Glenda VonRueden</h3>
-                <p class="testimonials__review description-text">
-                  Qui repellendus molestias ut earum ut placeat quos. Explicabo
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="testimonials__row">
-            <div class="testimonials__card card">
-              <div class="testimonials__image-container">
-                <img
-                  src="../images/hero-image.avif"
-                  alt=""
-                  class="testimonials__image"
-                />
-                <div
-                  class="testimonials__colored-shadow testimonials__colored-shadow--color3"
-                ></div>
-              </div>
-              <div class="testimonials__review-container">
-                <h3 class="testimonials__name">Glenda VonRueden</h3>
-                <p class="testimonials__review description-text">
-                  Qui repellendus molestias ut earum ut placeat quos. Explicabo
-                  ratione impedit iste. Quasi nostrum alias maiores assumenda.
-                </p>
-              </div>
-            </div>
-            <div class="testimonials__card card">
-              <div class="testimonials__image-container">
-                <img
-                  src="../images/hero-image.avif"
-                  alt=""
-                  class="testimonials__image"
-                />
-                <div
-                  class="testimonials__colored-shadow testimonials__colored-shadow--color1"
-                ></div>
-              </div>
-              <div class="testimonials__review-container">
-                <h3 class="testimonials__name">Glenda VonRueden</h3>
-                <p class="testimonials__review description-text">
-                  Qui repellendus molestias ut earum ut placeat quos. Explicabo
-                  ratione impedit iste. Quasi nostrum alias maiores assumenda.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="cta">
-        <div class="cta__text-content">
-          <div class="cta__header header">
-            <h2 class="cta__subheading subheading">Start learning smarter!</h2>
-            <p class="cta__description description-text">
-              Level up your learning with TutorPro—download now and ace your
-              studies
-            </p>
-          </div>
-          <a href="#" class="cta__button cta-button cta-button--primary"
-            >Download the app</a
-          >
-        </div>
-        <div class="cta__phone-mockup phone-mockup">
-          <div class="phone-mockup__brove">
-            <span class="phone-mockup__speaker"></span>
-          </div>
-          <div class="phone-mockup__screen"></div>
-        </div>
-      </section>
+      </footer>
     </div>
-    <footer class="footer">
-      <a href="#home" class="footer__logo logo">TutorPro.</a>
-      <div class="footer__links">
-        <ul class="footer__links-list">
-          <li class="footer__list-item">
-            <a class="footer__link" href="#home">Home</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__link" href="#about">About us</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__link" href="#pricing">Pricing</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__link" href="#testimonials">Testimonials</a>
-          </li>
-        </ul>
+    <div class="auth-pop-up pop-up">
+      <div class="pop-up__close-btn">&times;</div>
+      <div class="pop-up__form">
+        <h3 class="pop-up__header">Log in</h3>
+        <div class="pop-up__form-element">
+          <label class="pop-up__label" for="email">Email</label>
+          <input
+            class="pop-up__input"
+            type="text"
+            id="email"
+            placeholder="Enter email"
+          />
+        </div>
+        <div class="pop-up__form-element">
+          <label class="pop-up__label" for="password">Password</label>
+          <input
+            class="pop-up__input"
+            type="password"
+            id="password"
+            placeholder="Enter password"
+          />
+        </div>
+        <div class="pop-up__form-element">
+          <button class="pop-up__btn">Sign in</button>
+        </div>
+        <div class="pop-up__form-element">
+          <a href="#" class="pop-up__link">Create account</a>
+        </div>
       </div>
-    </footer>
+    </div>
     <script src="../js/app.js"></script>
   </body>
 </html>
