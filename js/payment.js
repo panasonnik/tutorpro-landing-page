@@ -41,10 +41,10 @@ async function buyPremiumSubscription(event) {
             }
 
             if (!result.success) {
-                const errorMessage = result.message || "Check your input and try again";
+                const errorMessage = result.message || "YOu have already subscrived to premium!";
                 displayErrorMessage(errorMessage);
             } else {
-                displaySuccessMessage("Payment was successful!");
+                displaySuccessMessage("Payment was successful! Redirecting to home page...");
                 setTimeout(() => {
                     window.location.href = "index.html";
                 }, 5000);
@@ -72,4 +72,14 @@ paymentForm.querySelectorAll(".pop-up__input").forEach(form => {
     form.addEventListener("input", function() {
         this.setCustomValidity("");
     });
+});
+
+document.querySelector('input[name="date_of_expiration"]').addEventListener('input', function(event) {
+    const input = event.target;
+    const value = input.value.replace(/\D/g, '');
+    if (value.length > 2) {
+        input.value = `${value.slice(0, 2)}/${value.slice(2)}`;
+    } else {
+        input.value = value;
+    }
 });
