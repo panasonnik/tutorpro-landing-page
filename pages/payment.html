@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
-    <h1>PAYMENT</h1>
-    <div class="payment-pop-up pop-up">
+    <div class="pop-up payment-form">
       <div class="pop-up__form">
-        <h3 class="pop-up__header">Pay</h3>
+        <h3 class="pop-up__header">Total summary: $5</h3>
         <form id="paymentForm">
           <div class="pop-up__form-element">
             <label class="pop-up__label" for="card-number">Card number</label>
@@ -24,30 +23,32 @@
               required
             />
           </div>
-          <div class="pop-up__form-element">
-            <label class="pop-up__label" for="cvv">CVV</label>
-            <input
-              class="pop-up__input"
-              type="text"
-              name="cvv"
-              placeholder="xxx"
-              pattern="[0-9]{3}"
-              title="Please enter a valid CVV (3 digits)"
-              required
-            />
-          </div>
-          <div class="pop-up__form-element">
-            <label class="pop-up__label" for="expiration-date"
-              >Date of expiry</label
-            >
-            <input
-              class="pop-up__input"
-              type="text"
-              name="date_of_expiration"
-              pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
-              title="Please enter a valid date in the format MM/YY"
-              placeholder="MM/YY"
-            />
+          <div class="payment-form__inputs-row">
+            <div class="pop-up__form-element">
+              <label class="pop-up__label" for="cvv">CVV</label>
+              <input
+                class="pop-up__input"
+                type="text"
+                name="cvv"
+                placeholder="xxx"
+                pattern="[0-9]{3}"
+                title="Please enter a valid CVV (3 digits)"
+                required
+              />
+            </div>
+            <div class="pop-up__form-element">
+              <label class="pop-up__label" for="expiration-date"
+                >Date of expiry</label
+              >
+              <input
+                class="pop-up__input"
+                type="text"
+                name="date_of_expiration"
+                pattern="(0[1-9]|1[0-2])\/[0-9]{2}"
+                title="Please enter a valid date in the format MM/YY"
+                placeholder="MM/YY"
+              />
+            </div>
           </div>
           <div class="pop-up__error-message payment-error"></div>
           <div class="pop-up__success-message payment-success"></div>
@@ -58,6 +59,24 @@
         </form>
       </div>
     </div>
+
+    <div class="log-out-pop-up pop-up">
+      <div class="pop-up__form">
+        <h3 class="pop-up__header log-out-pop-up__header">
+          Payment was successful
+        </h3>
+        <form id="logOutForm">
+          <div class="pop-up__form-element">
+            <button type="submit" class="pop-up__btn pop-up__log-out-btn">
+              Log out
+            </button>
+          </div>
+          <div class="pop-up__error-message log-out-error"></div>
+        </form>
+      </div>
+    </div>
+
     <script src="../js/payment.js"></script>
+    <script src="../js/logout.js"></script>
   </body>
 </html>

@@ -1,0 +1,11 @@
+.payment-form__inputs-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.payment-form {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}

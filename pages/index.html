@@ -386,8 +386,25 @@
       </div>
     </div>
 
+    <div class="log-out-pop-up pop-up">
+      <div class="pop-up__form">
+        <h3 class="pop-up__header log-out-pop-up__header">
+          You have already subscribed to premium!
+        </h3>
+        <form id="logOutForm">
+          <div class="pop-up__form-element">
+            <button type="submit" class="pop-up__btn pop-up__log-out-btn">
+              Log out
+            </button>
+          </div>
+          <div class="pop-up__error-message log-out-error"></div>
+        </form>
+      </div>
+    </div>
+
     <script src="../js/app.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="../js/newUser.js"></script>
+    <script src="../js/auth/login.js"></script>
+    <script src="../js/auth/newUser.js"></script>
+    <script src="../js/auth/logout.js"></script>
   </body>
 </html>

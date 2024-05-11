@@ -2,15 +2,10 @@ function displayErrorMessage(message) {
     const errorDiv = document.querySelector(".payment-error");
     errorDiv.textContent = message;
 }
-function displaySuccessMessage(message) {
-    const errorDiv = document.querySelector(".payment-success");
-    errorDiv.textContent = message;
-}
-
 async function buyPremiumSubscription(event) {
     event.preventDefault();
     const form = document.getElementById("paymentForm");
- 
+
     if (form.checkValidity()) {
         const formData = new FormData(form);
         const data = {};
@@ -18,7 +13,7 @@ async function buyPremiumSubscription(event) {
         formData.forEach((value, key) => {
             data[key] = value;
         });
-        console.log(data);
+
         try {
             const response = await fetch("http://127.0.0.1:8000/api/user/premium-purchase", {
                 method: "POST",
@@ -41,13 +36,14 @@ async function buyPremiumSubscription(event) {
             }
 
             if (!result.success) {
-                const errorMessage = result.message || "YOu have already subscrived to premium!";
+                const errorMessage = result.message || "You have already subscribed to premium!";
                 displayErrorMessage(errorMessage);
             } else {
-                displaySuccessMessage("Payment was successful! Redirecting to home page...");
-                setTimeout(() => {
-                    window.location.href = "index.html";
-                }, 5000);
+                const header = document.querySelector(".log-out-pop-up__header");
+                header.classList.add("log-out-pop-up__header--success");
+                header.textContent = "Payment was successful!";
+
+                document.querySelector(".log-out-pop-up").classList.toggle("active");
             }
 
         } catch (error) {
@@ -76,10 +72,9 @@ paymentForm.querySelectorAll(".pop-up__input").forEach(form => {
 
 document.querySelector('input[name="date_of_expiration"]').addEventListener('input', function(event) {
     const input = event.target;
-    const value = input.value.replace(/\D/g, '');
+    let value = input.value.replace(/\D/g, '');
     if (value.length > 2) {
-        input.value = `${value.slice(0, 2)}/${value.slice(2)}`;
-    } else {
-        input.value = value;
+        value = `${value.slice(0, 2)}/${value.slice(2)}`;
     }
+    input.value = value;
 });
