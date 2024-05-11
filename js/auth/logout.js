@@ -8,7 +8,7 @@ async function logOutUser(event) {
     const token = localStorage.getItem("authToken");
     
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/auth/logout", {
+        const response = await fetch("http://45.94.158.182/~tutorpro/public/api/auth/logout", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

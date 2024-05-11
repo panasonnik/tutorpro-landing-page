@@ -15,7 +15,7 @@ async function buyPremiumSubscription(event) {
         });
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/user/premium-purchase", {
+            const response = await fetch("http://45.94.158.182/~tutorpro/public/api/user/premium-purchase", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
