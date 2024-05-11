@@ -6,6 +6,7 @@ async function createUser() {
         data[key] = value;
     });
     data.device = "Laptop";
+    console.log(data);
     try {
       const response = await fetch("http://127.0.0.1:8000/api/auth/register", {
         method: "POST",
@@ -17,29 +18,19 @@ async function createUser() {
       });
   
       const result = await response.json();
-      return result.unique;
-    //   if (result.success === true) {
-    //     window.location.href = "payment.html";
-    //   }
+      if (result.success === true) {
+        localStorage.setItem("authToken", result.data.token);
+        window.location.href = "payment.html";
+      }
     } catch (error) {
       console.error("Error:", error);
     }
 }
-document.querySelector(".pop-up__sign-in-btn").addEventListener('click', function() {
-    createUser();
-});
+// document.querySelector(".pop-up__sign-in-btn").addEventListener('click', function() {
+//     createUser();
+// });
 
 document.getElementById("signInForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-    const emailInput = document.getElementById("register-email");
-    const emailError = document.getElementById("email-error");
-
-    const email = emailInput.value;
-    const isUnique = await isEmailUnique(email);
-    if (!isUnique) {
-        emailError.textContent = "Email already in use!";
-        return;
-    }
-
-    this.submit();
+    createUser();
 });

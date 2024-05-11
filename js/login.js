@@ -31,6 +31,8 @@ async function loginUser(event) {
                 displayErrorMessage(errorMessage);
             }
             if (result.success === true) {
+    
+                    localStorage.setItem("authToken", result.data.token);
                 window.location.href = "payment.html";
             }
 

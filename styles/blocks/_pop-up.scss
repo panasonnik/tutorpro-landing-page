@@ -67,6 +67,11 @@
         color:rgb(174, 3, 3);
         font-size:14px;
     }
+    &__success-message {
+        margin-top:5px;
+        color:rgb(22, 119, 22);
+        font-size:14px;
+    }
 }
 .sign-in-pop-up {
     &.active {
@@ -75,4 +80,11 @@
   opacity: 1;
   transition: 0.5s;
     }
+}
+
+.payment-pop-up {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
