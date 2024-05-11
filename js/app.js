@@ -21,22 +21,16 @@ window.onscroll = () => {
     });
 };
 
-//open and close drawer menu on small devices
-function openSidebar() {
-    document.querySelector('.navbar__list--sidebar').style.width = "100%";
-    document.querySelector('.navbar__list--sidebar').style.right = "0";
-    document.querySelector('.navbar__close-menu').style.display = "block";
+function toggleNavbar() {
+    const navbarList = document.querySelector(".navbar__list");
+    navbarList.classList.toggle("active"); // Toggle the "active" class
+    
 }
 
-function closeSidebar() {
-    document.querySelector('.navbar__list--sidebar').style.width = "0";
-    document.querySelector('.navbar__list--sidebar').style.right = "-250px";
-    document.querySelector('.navbar__close-menu').style.display = "none";
-}
 
 function handleSidebarClick(event) {
     if (event.target.tagName === 'A') {
-        closeSidebar();
+        toggleNavbar();
     }
 }
 
