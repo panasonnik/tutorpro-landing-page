@@ -361,7 +361,7 @@ body {
   transform: translate(-50%, -50%);
   width: 360px;
   padding: 30px;
-  background: #c9c9c9;
+  background: #f5f5f5;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   visibility: hidden;
@@ -410,6 +410,11 @@ body {
   outline: none;
   cursor: pointer;
   font-size: 16px;
+  transition: all 200ms ease-in-out;
+  background: #FEC447;
+}
+.pop-up__btn:hover, .pop-up__sign-in-btn:hover {
+  background: #ffbb29;
 }
 .pop-up__link {
   display: block;
@@ -428,6 +433,17 @@ body {
   margin-top: 5px;
   color: rgb(22, 119, 22);
   font-size: 14px;
+}
+.pop-up__icon {
+  width: 20px;
+  height: 20px;
+}
+.pop-up__log-out-btn {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  color: rgb(174, 3, 3);
+  fill: rgb(174, 3, 3);
 }
 
 .sign-in-pop-up.active {
