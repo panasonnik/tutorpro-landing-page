@@ -305,6 +305,22 @@ body {
     gap: 20px;
   }
 }
+.card__feature-item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.card__feature-icon {
+  width: 20px;
+  aspect-ratio: 1/1;
+  fill: #262626;
+}
+.card__feature-icon--disabled {
+  fill: rgb(174, 3, 3);
+}
+.card__feature-icon--enabled {
+  fill: rgb(22, 119, 22);
+}
 
 .phone-mockup__image {
   width: 100%;
@@ -537,6 +553,7 @@ body {
 }
 .about__cards {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
   margin-top: 50px;
 }
@@ -547,6 +564,7 @@ body {
 }
 .about__card {
   aspect-ratio: 1/1;
+  flex: 1;
 }
 @media only screen and (max-width: 1024px) {
   .about__card {

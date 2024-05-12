@@ -9,7 +9,8 @@
         margin:0 auto; 
     }
     &__cards {
-        display: flex; 
+        display: flex;
+        justify-content: space-between; 
         gap: 20px;
         margin-top:50px;
         // grid-template-columns: repeat(3, 1fr);
@@ -25,6 +26,7 @@
     }
     &__card {
         aspect-ratio: 1/1;
+        flex:1;
         @include mq(medium) {
             padding:35px 30px;
             aspect-ratio: 2/1;
