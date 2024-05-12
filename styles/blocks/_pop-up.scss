@@ -11,13 +11,13 @@
     box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
     border-radius:12px;
     visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
+    opacity: 0;
+    transition: 0.5s;
     &.active {
         top: 50%;
-  visibility: visible;
-  opacity: 1;
-  transition: 0.5s;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
     }
     &__close-btn, &__close-sign-in-btn {
         position:absolute;

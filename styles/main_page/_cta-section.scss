@@ -2,18 +2,18 @@
 
 .cta {
     display: flex;
-    gap: 100px;
+    gap: 30px;
     align-items: center;
+    justify-content: center;
     margin-top:100px;
     margin-bottom:32px;
-    @include mq(large) {
-        gap:50px;
-    }
-    @include mq(medium) {
-        gap:50px;
-    }
+    // @include mq(large) {
+    //     gap:50px;
+    // }
+    // @include mq(medium) {
+    //     gap:50px;
+    // }
     @include mq(small) {
-        align-items: center;
         margin-bottom:100px;
     }
     &__text-content {
@@ -47,7 +47,7 @@
             display: none;
         }
         @include mq(medium) {
-            flex:1;
+            flex:2;
         }
     }
 }
