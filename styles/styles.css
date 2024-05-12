@@ -442,8 +442,15 @@ body {
   display: flex;
   justify-content: center;
   gap: 6px;
+  background: #ececec;
+  border: 1px solid #ececec;
   color: rgb(174, 3, 3);
   fill: rgb(174, 3, 3);
+  transition: all 200ms ease-in-out;
+}
+.pop-up__log-out-btn:hover {
+  background: #dedede;
+  border: 1px solid rgb(174, 3, 3);
 }
 
 .sign-in-pop-up.active {

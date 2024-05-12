@@ -87,8 +87,15 @@
         display: flex;
         justify-content: center;
         gap:6px;
+        background: #ececec;
+        border:1px solid #ececec;
         color: rgb(174, 3, 3);
         fill:rgb(174, 3, 3);
+        transition: all 200ms ease-in-out;
+        &:hover {
+            background: #dedede;
+            border:1px solid rgba(174,3,3);
+        }
     }
 }
 .sign-in-pop-up {
