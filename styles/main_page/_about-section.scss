@@ -21,7 +21,7 @@
             
         // }
         @include mq(medium) {
-            flex-wrap: wrap;
+            flex-direction: column;
         }
     }
     &__card {

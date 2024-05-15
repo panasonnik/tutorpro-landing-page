@@ -38,16 +38,26 @@
         gap: 20px;
         @include mq(medium) {
             order:4;
+            width:100%;
         }
     }
-    @include mq(medium) {
-        &__cta-button--primary {
-            flex:4;
+    &__cta-button--primary {
+        @include mq(medium) {
+            width: 50%;
+            margin: auto;
         }
-        &__cta-button--outline {
+        @include mq(small) {
+            width:100%;
+        }
+    }
+    &__cta-button--outline {
+        @include mq(medium) {
             display: none;
         }
     }
+    
+      
+    
     &__image-container {
         display: flex;
         float:right;

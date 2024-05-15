@@ -54,12 +54,9 @@
       }
     }
     &__price {
+        font-size: 48px;
+        color:variables.$color-text;
         margin:0;
-        font-size: 18px;
-        color:variables.$color-text-muted;
-        span {
-            font-size: 48px;
-            color:variables.$color-text;
-        }
+        
     }
 }

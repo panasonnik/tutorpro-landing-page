@@ -483,12 +483,21 @@ body {
 @media only screen and (max-width: 1024px) {
   .hero__buttons-container {
     order: 4;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 1024px) {
   .hero__cta-button--primary {
-    flex: 4;
+    width: 50%;
+    margin: auto;
   }
+}
+@media only screen and (max-width: 768px) {
+  .hero__cta-button--primary {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
   .hero__cta-button--outline {
     display: none;
   }
@@ -559,7 +568,7 @@ body {
 }
 @media only screen and (max-width: 1024px) {
   .about__cards {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 .about__card {
@@ -680,13 +689,9 @@ body {
   display: none;
 }
 .card__price {
-  margin: 0;
-  font-size: 18px;
-  color: #455A6F;
-}
-.card__price span {
   font-size: 48px;
   color: #262626;
+  margin: 0;
 }
 
 .testimonials {
