@@ -23,10 +23,9 @@ window.onscroll = () => {
 
 function toggleNavbar() {
     const navbarList = document.querySelector(".navbar__list");
-    navbarList.classList.toggle("active"); // Toggle the "active" class
+    navbarList.classList.toggle("active");
     
 }
-
 
 function handleSidebarClick(event) {
     if (event.target.tagName === 'A') {
